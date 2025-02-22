@@ -1,0 +1,97 @@
+# Python - will work in any nested folder
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/*.so
+**/.Python
+**/build/
+**/develop-eggs/
+**/dist/
+**/downloads/
+**/eggs/
+**/.eggs/
+**/lib/
+**/lib64/
+**/parts/
+**/sdist/
+**/var/
+**/wheels/
+**/*.egg-info/
+**/.installed.cfg
+**/*.egg
+**/.pytest_cache/
+**/.coverage
+**/htmlcov/
+**/.env
+**/.venv
+**/env/
+**/venv/
+**/ENV/
+**/.python-version
+
+# Node - will work in any nested folder
+**/node_modules/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+**/.npm
+**/.yarn
+**/.pnp.*
+**/.next/
+**/out/
+**/.DS_Store
+
+# IDEs and editors - will work in any nested folder
+**/.idea/
+**/.vscode/
+**/*.swp
+**/*.swo
+**/.project
+**/.classpath
+**/*.sublime-workspace
+**/*.sublime-project
+
+# Secrets and environment variables - will work in any nested folder
+**/*.env
+**/*.env.*
+**/.env.local
+**/.env.*.local
+**/config.ini
+**/secrets.yaml
+**/secrets.yml
+**/*.pem
+**/*.key
+**/*.cert
+
+# Logs and databases - will work in any nested folder
+**/*.log
+**/*.sqlite
+**/*.sqlite3
+**/*.db
+
+# OS generated files - will work in any nested folder
+**/.DS_Store?
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+**/ehthumbs.db
+**/Thumbs.db
+
+# Temporary files - will work in any nested folder
+**/*.tmp
+**/*.temp
+**/*.bak
+**/*~
+
+# Package files - will work in any nested folder
+**/*.tgz
+**/*.tar.gz
+**/*.zip
+
+# Coverage and test reports - will work in any nested folder
+**/coverage/
+**/.nyc_output/
+
+# Build outputs - will work in any nested folder
+**/*.pyc
