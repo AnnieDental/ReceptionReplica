@@ -3,11 +3,20 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import { ElevenLabsConversation } from "./ElevenLabsConversation";
+import Display from "@/pages/display.tsx";
 
 const Stepper = () => {
   const [currentStep, setCurrentStep] = useState(0);
+    const [conversationId, setConversationId] = useState<string | null>(null);
 
-  const steps = [
+    const handleConversationEnd = (id: string) => {
+        setConversationId(id);
+        // Optionally, you can advance the step here
+        setCurrentStep(3);
+    };
+
+
+    const steps = [
     {
       title: "Welcome",
       content: (
@@ -68,7 +77,7 @@ const Stepper = () => {
           </div>
 
           <Button
-            onClick={() => setCurrentStep(2)}
+            onClick={() => setCurrentStep(3)}
             className="rounded-full px-8 py-6 transition-all duration-300 hover:scale-105"
           >
             <span className="mr-2">Start Call</span>
@@ -85,7 +94,22 @@ const Stepper = () => {
             Show us how you handle a call.
           </h2>
           <div className="flex justify-center">
-            <ElevenLabsConversation />
+            <ElevenLabsConversation onConversationEnd={handleConversationEnd}/>
+          </div>
+        </div>
+      ),
+    },
+      {
+      title: "View Flow",
+      content: (
+        <div className="text-center space-y-6 animate-fade-in">
+          <h2 className="text-2xl font-semibold tracking-tight">
+            View your training flow.
+          </h2>
+          <div className="flex justify-center">
+            <Display
+            conversationId="tJYVwnChAkFzOiuKTDge"
+            />
           </div>
         </div>
       ),
