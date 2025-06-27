@@ -14,7 +14,7 @@ const Stepper = () => {
         // Optionally, you can advance the step here
         setTimeout(() => {
             setCurrentStep(3);
-        }, 5 * 1000);
+        }, 10 * 1000);
     };
 
 
