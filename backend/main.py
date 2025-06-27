@@ -194,8 +194,8 @@ def log_conversation_id(conversation_id: str):
                 "content": transcript_xml,
             }
         ],
-        model="o3-mini",
-        reasoning_effort="high",
+        model="o4-mini",
+        reasoning_effort="low",
         response_format=PromptBlock
     )
 
@@ -219,8 +219,8 @@ def test():
                 "content": TEST_TRANSCRIPT,
             }
         ],
-        model="o3-mini",
-        reasoning_effort="high",
+        model="o4-mini",
+        reasoning_effort="low",
         response_format=PromptBlock
     )
 

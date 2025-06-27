@@ -12,7 +12,9 @@ const Stepper = () => {
     const handleConversationEnd = (id: string) => {
         setConversationId(id);
         // Optionally, you can advance the step here
-        setCurrentStep(3);
+        setTimeout(() => {
+            setCurrentStep(3);
+        }, 5 * 1000);
     };
 
 
@@ -77,7 +79,7 @@ const Stepper = () => {
           </div>
 
           <Button
-            onClick={() => setCurrentStep(3)}
+            onClick={() => setCurrentStep(2)}
             className="rounded-full px-8 py-6 transition-all duration-300 hover:scale-105"
           >
             <span className="mr-2">Start Call</span>
@@ -106,11 +108,19 @@ const Stepper = () => {
           <h2 className="text-2xl font-semibold tracking-tight">
             View your training flow.
           </h2>
-          <div className="flex justify-center">
-            <Display
-            conversationId="tJYVwnChAkFzOiuKTDge"
-            />
-          </div>
+          {conversationId ? (
+            <div className="flex justify-center">
+              <Display
+              conversationId={conversationId}
+              />
+            </div>
+          ) : (
+            <div className="bg-white p-4 rounded-md border border-gray-200">
+              <p className="text-gray-500">
+                No conversation data available. Please complete a call first.
+              </p>
+            </div>
+          )}
         </div>
       ),
     },

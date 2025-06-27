@@ -1,0 +1,3 @@
+### GET request to example server
+GET http://localhost:6970/flows/conv_01jyrxy16yevtafdrs4jr25rq1
+###
