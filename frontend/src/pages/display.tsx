@@ -27,7 +27,7 @@ const Display: React.FC<DisplayProps> = ({ conversationId }) => {
     // When conversationId is available, fetch the related workflow data.
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://127.0.0.1:6970/flows/${conversationId}`);
+        const response = await fetch(`http://127.0.0.1:8000/flows/${conversationId}`);
         if (!response.ok) throw new Error("Network response was not ok");
         const workflowData: WorkflowData = await response.json();
         setData(workflowData);
